@@ -13,7 +13,7 @@ class UserRegistrationTest {
 	@Test
 	void givenPassword_returnTrue() {
 		
-		boolean result = registration.firstName("Srika960");//^[A-Za-z0-9]{8}$
+		boolean result = registration.firstName("Srika960");//^[A-Z]{1}[A-Za-z0-9]{7}$
 		Assertions.assertEquals(true, result);
 	}
 
@@ -21,7 +21,7 @@ class UserRegistrationTest {
 
 	void givenPassword_returnFalse() {
 
-		boolean result = registration.firstName("Srikanth9640");
+		boolean result = registration.firstName("srikanth9640");
 		Assertions.assertEquals(false, result);
 	}
 
