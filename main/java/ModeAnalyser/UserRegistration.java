@@ -6,7 +6,8 @@ public class UserRegistration {
 
 	public boolean firstName(String PassWord) {
 		
-		Pattern p = Pattern.compile("^[A-Z]{1}[A-Za-z0-9]{7}$");
+		/* \\d is refer to [0-9] values*/
+		Pattern p = Pattern.compile("^[A-Z]{1}[\\d]{1}[A-Za-z]{6}$");
 		Matcher m = p.matcher(PassWord);
 		boolean result = m.matches();
 		return result;
