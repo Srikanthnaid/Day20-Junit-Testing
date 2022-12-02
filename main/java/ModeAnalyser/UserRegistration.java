@@ -1,13 +1,14 @@
 package ModeAnalyser;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-	public boolean firstName(String Email) {
+	public boolean firstName(String MobNumber) {
 		
-		//result is boolean variable.
-		//pattern.matches is inbuilt method of pattern class.
-		boolean m = Pattern.matches("^[a-zA-Z]+[.][A-Za-z]+@[a-zA-Z]+[.]+[a-zA-Z]{2}+[.][A-Za-z]{2}+$", Email);
-		return m;
+		Pattern p = Pattern.compile("^[1-9]{2}\\s[6-9]{1}[0-9]{9}$");
+		Matcher m = p.matcher(MobNumber);
+		boolean result = m.matches();
+		return result;
 	}
 }

@@ -11,17 +11,17 @@ class UserRegistrationTest {
 	UserRegistration registration = new UserRegistration();
 
 	@Test
-	void givenEmail_returnTrue() {
+	void givenMobNumber_returnTrue() {
 		
-		boolean result = registration.firstName("abc.xyz@bl.co.in");
+		boolean result = registration.firstName("91 9640604452");//[1-9]{2}+[ ][6-9]{1}[1-9]{9}$
 		Assertions.assertEquals(true, result);
 	}
 
 	@Test
 
-	void givenLastName_With_OneUppercaseLetter_returnFalse() {
+	void givenMobNumber_returnFalse() {
 
-		boolean result = registration.firstName("sjdh.ashg@sjco.in");
+		boolean result = registration.firstName("919640604452");
 		Assertions.assertEquals(false, result);
 	}
 
