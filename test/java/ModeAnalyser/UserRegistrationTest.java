@@ -11,17 +11,17 @@ class UserRegistrationTest {
 	UserRegistration registration = new UserRegistration();
 
 	@Test
-	void givenMobNumber_returnTrue() {
+	void givenPassword_returnTrue() {
 		
-		boolean result = registration.firstName("91 9640604452");//[1-9]{2}+[ ][6-9]{1}[1-9]{9}$
+		boolean result = registration.firstName("Srika960");//^[A-Za-z0-9]{8}$
 		Assertions.assertEquals(true, result);
 	}
 
 	@Test
 
-	void givenMobNumber_returnFalse() {
+	void givenPassword_returnFalse() {
 
-		boolean result = registration.firstName("919640604452");
+		boolean result = registration.firstName("Srikanth9640");
 		Assertions.assertEquals(false, result);
 	}
 
