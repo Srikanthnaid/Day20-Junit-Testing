@@ -13,7 +13,7 @@ class UserRegistrationTest {
 	@Test
 	void givenPassword_returnTrue() {
 		
-		boolean result = registration.firstName("S9rikant");//^[A-Z]{1}[A-Za-z0-9]{7}$
+		boolean result = registration.firstName("S9#ikant");
 		Assertions.assertEquals(true, result);
 	}
 
