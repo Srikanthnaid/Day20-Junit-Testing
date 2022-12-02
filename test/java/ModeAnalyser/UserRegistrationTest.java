@@ -11,17 +11,17 @@ class UserRegistrationTest {
 	UserRegistration registration = new UserRegistration();
 
 	@Test
-	void givenFirstName_With_OneUppercaseLetter_returnTrue() {
+	void givenLastName_With_OneUppercaseLetter_returnTrue() {
 		
-		boolean result = registration.firstName("Srikanth");
+		boolean result = registration.firstName("Naidu");
 		Assertions.assertEquals(true, result);
 	}
 
 	@Test
 
-	void givenFirstName_With_OneUppercaseLetter_returnFalse() {
+	void givenLastName_With_OneUppercaseLetter_returnFalse() {
 
-		boolean result = registration.firstName("srikanth");
+		boolean result = registration.firstName("naidu");
 		Assertions.assertEquals(false, result);
 	}
 
