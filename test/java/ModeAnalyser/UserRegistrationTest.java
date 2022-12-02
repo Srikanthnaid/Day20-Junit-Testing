@@ -11,9 +11,9 @@ class UserRegistrationTest {
 	UserRegistration registration = new UserRegistration();
 
 	@Test
-	void givenLastName_With_OneUppercaseLetter_returnTrue() {
+	void givenEmail_returnTrue() {
 		
-		boolean result = registration.firstName("Naidu");
+		boolean result = registration.firstName("abc.xyz@bl.co.in");
 		Assertions.assertEquals(true, result);
 	}
 
@@ -21,7 +21,7 @@ class UserRegistrationTest {
 
 	void givenLastName_With_OneUppercaseLetter_returnFalse() {
 
-		boolean result = registration.firstName("naidu");
+		boolean result = registration.firstName("sjdh.ashg@sjco.in");
 		Assertions.assertEquals(false, result);
 	}
 
